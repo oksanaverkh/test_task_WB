@@ -1,0 +1,27 @@
+workspace {
+
+    model {
+        user = person "Клиент" "Использует маркетплейс"
+        supplier = person "Поставщик" "Использует маркетплейс"
+        admin = person "Администратор" "Управляет маркетплейсом"
+        Marketplace = softwareSystem "Marketplace" "Маркетплейс"
+        payment = softwareSystem "Оплата" "Система оплаты"
+        delivery = softwareSystem "Доставка" "Система доставки"
+        
+
+        user -> Marketplace "Использует" 
+        supplier -> Marketplace "Использует" 
+        admin -> Marketplace "Управляет" 
+        Marketplace -> payment "Интеграция"
+        Marketplace -> delivery "Интеграция"
+    }
+
+    views {
+        systemContext Marketplace {
+            include *
+            autoLayout lr
+        }
+
+        theme default
+    }
+}
