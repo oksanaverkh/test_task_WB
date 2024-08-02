@@ -4,7 +4,7 @@ import telebot
 PERIODS = {'h': 'часов', 'd': 'дней', 'w': 'недель', 'm': 'месяцев'}
 
 # имя бота: reminder_WB_bot
-bot = telebot.TeleBot('7309683171:AAFKM-t0zbEmiRPYP8HnNP4Q-3Z-mHoWxtQ')
+bot = telebot.TeleBot('token')
 
 # Инициализируем переменные для срока напоминания и задачи
 time = 0
